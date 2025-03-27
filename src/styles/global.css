@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+  --background-color: #000;
+  --text-color: #00ff00; /* Neon Green */
+  --sidebar-bg: #111;
+  --terminal-bg: #000;
+  --map-border: #00ff00;
+  --font-family: "Orbitron", monospace;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--sidebar-bg);
+  padding: 20px;
+  border-right: 2px solid var(--text-color);
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--text-color);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+  border-left: 4px solid var(--text-color);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  height: 50%;
+  border-bottom: 2px solid var(--map-border);
+  box-shadow: 0 0 10px var(--map-border);
+}
