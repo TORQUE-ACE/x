@@ -1,34 +1,5 @@
 ---
-import TerminalComponent from "../components/TerminalComponent.astro";
-import MapComponent from "../components/MapComponent.astro";
+import AuthWrapper from "../components/AuthWrapper.jsx";
 ---
 
-<html>
-  <head>
-    <link rel="stylesheet" href="/src/styles/global.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <h2>Drone Control</h2>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/map">Map</a></li>
-            <li><a href="/terminal">Terminal</a></li>
-            <li><a href="/settings">Settings</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="main-content">
-        <div class="map-container">
-          <MapComponent />
-        </div>
-        <div class="terminal-container">
-          <TerminalComponent />
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+<AuthWrapper client:load />
